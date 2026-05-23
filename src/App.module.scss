@@ -1,19 +1,26 @@
 .app {
-  --klyger-orange: #ff9554;
-  --klyger-orange-dark: #e4674c;
-  --klyger-pink: #ff96be;
-  --klyger-brown: #b05d3a;
-  --klyger-dark: #0d0d0d;
-  --klyger-dark-2: #131313;
-  --klyger-dark-3: #1a1a1a;
-  --klyger-dark-4: #222;
-  --klyger-gray-light: #bebebe;
-  --klyger-gray-mid: #737373;
-  --klyger-white: #fff;
-  --klyger-heading-font: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --klyger-orange: #e46f3f;
+  --klyger-orange-dark: #c95f35;
+  --klyger-pink: #f3a2ba;
+  --klyger-brown: #8f6448;
+  --klyger-dark: #f7f4ee;
+  --klyger-dark-2: #fffaf3;
+  --klyger-dark-3: #ffffff;
+  --klyger-dark-4: #f1ebe2;
+  --klyger-white: #17130f;
+  --klyger-gray-light: #5d554d;
+  --klyger-gray-mid: #91887d;
+  --klyger-border: #e7ded2;
+  --klyger-button-text: #17130f;
+  --klyger-heading-font: 'Poppins', 'Segoe UI', sans-serif;
   --klyger-body-font: 'Poppins', 'Segoe UI', sans-serif;
   --klyger-ease: cubic-bezier(0.16, 1, 0.3, 1);
-  --klyger-shadow-hard: 4px 4px 0 var(--klyger-dark);
+  --klyger-radius: 16px;
+  --klyger-radius-lg: 22px;
+  --klyger-shadow-soft: 0 18px 45px rgb(54 42 31 / 10%);
+  --klyger-shadow-hard: 0 10px 24px rgb(54 42 31 / 12%);
+  --klyger-hero-overlay: rgb(247 244 238 / 96%);
+  --klyger-hero-overlay-soft: rgb(247 244 238 / 72%);
 
   min-height: 100vh;
   overflow-x: hidden;
@@ -23,11 +30,12 @@
   font-family: var(--klyger-body-font);
   font-weight: 300;
   line-height: 1.7;
+  transition: background 0.25s ease, color 0.25s ease;
 
   :global([data-reveal]) {
     opacity: 0;
     transform: translateY(18px);
-    transition: opacity 0.7s var(--klyger-ease), transform 0.7s var(--klyger-ease);
+    transition: opacity 0.55s var(--klyger-ease), transform 0.55s var(--klyger-ease);
   }
 
   :global([data-reveal].is-visible) {
@@ -35,9 +43,38 @@
     transform: none;
   }
 
+  :global(article) {
+    border: 1px solid var(--klyger-border);
+    border-radius: var(--klyger-radius);
+  }
+
+  :global(section img) {
+    border-radius: var(--klyger-radius-lg);
+  }
+
   @media (hover: none), (pointer: coarse) {
     cursor: auto;
   }
+}
+
+.dark {
+  --klyger-orange: #ff9554;
+  --klyger-orange-dark: #e4674c;
+  --klyger-pink: #ff96be;
+  --klyger-brown: #b05d3a;
+  --klyger-dark: #0f0f0f;
+  --klyger-dark-2: #151515;
+  --klyger-dark-3: #1c1c1c;
+  --klyger-dark-4: #252525;
+  --klyger-white: #ffffff;
+  --klyger-gray-light: #c7c7c7;
+  --klyger-gray-mid: #7d7d7d;
+  --klyger-border: #303030;
+  --klyger-button-text: #111111;
+  --klyger-shadow-soft: 0 18px 45px rgb(0 0 0 / 22%);
+  --klyger-shadow-hard: 0 10px 24px rgb(0 0 0 / 25%);
+  --klyger-hero-overlay: rgb(15 15 15 / 92%);
+  --klyger-hero-overlay-soft: rgb(15 15 15 / 68%);
 }
 
 .main {

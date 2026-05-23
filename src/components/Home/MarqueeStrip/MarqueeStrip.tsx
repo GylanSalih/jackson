@@ -1,12 +1,12 @@
-import React from 'react';
-import styles from './MarqueeStrip.module.scss';
+import React from "react";
+import styles from "./MarqueeStrip.module.scss";
 
 const items = [
-  'Creator Brand Building',
-  'Von Follower zu Kunden',
-  'Unleashed',
-  'Eigene Marke aufbauen',
-  'Skalierbares Business',
+  "Creator Brand Building",
+  "Von Follower zu Kunden",
+  "Unleashed",
+  "Eigene Marke aufbauen",
+  "Skalierbares Business",
 ];
 
 const MarqueeStrip = (): React.ReactElement => {

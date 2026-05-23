@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './ContactBrief.module.scss';
+import React from "react";
+import styles from "./ContactBrief.module.scss";
 
 const ContactBrief = (): React.ReactElement => {
   return (
@@ -21,7 +21,11 @@ const ContactBrief = (): React.ReactElement => {
           </label>
           <label>
             Projekt
-            <textarea name="project" placeholder="Reichweite, Ziel, Produktidee, Timeline" rows={5} />
+            <textarea
+              name="project"
+              placeholder="Reichweite, Ziel, Produktidee, Timeline"
+              rows={5}
+            />
           </label>
           <button type="button">Anfrage vorbereiten</button>
         </form>

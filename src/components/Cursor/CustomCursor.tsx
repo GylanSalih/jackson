@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import styles from './CustomCursor.module.scss';
+import React, { useEffect, useRef } from "react";
+import styles from "./CustomCursor.module.scss";
 
 const CustomCursor = (): React.ReactElement => {
   const dotRef = useRef<HTMLDivElement>(null);
@@ -33,13 +33,21 @@ const CustomCursor = (): React.ReactElement => {
     };
 
     const handleMouseOver = (event: MouseEvent) => {
-      if ((event.target as Element).closest('a, button, [data-cursor="interactive"]')) {
+      if (
+        (event.target as Element).closest(
+          'a, button, [data-cursor="interactive"]',
+        )
+      ) {
         setInteractive(true);
       }
     };
 
     const handleMouseOut = (event: MouseEvent) => {
-      if ((event.target as Element).closest('a, button, [data-cursor="interactive"]')) {
+      if (
+        (event.target as Element).closest(
+          'a, button, [data-cursor="interactive"]',
+        )
+      ) {
         setInteractive(false);
       }
     };
@@ -52,15 +60,15 @@ const CustomCursor = (): React.ReactElement => {
       frameId = requestAnimationFrame(animate);
     };
 
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseover', handleMouseOver);
-    document.addEventListener('mouseout', handleMouseOut);
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseover", handleMouseOver);
+    document.addEventListener("mouseout", handleMouseOut);
     frameId = requestAnimationFrame(animate);
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseover', handleMouseOver);
-      document.removeEventListener('mouseout', handleMouseOut);
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseover", handleMouseOver);
+      document.removeEventListener("mouseout", handleMouseOut);
       cancelAnimationFrame(frameId);
     };
   }, []);

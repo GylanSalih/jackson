@@ -32,7 +32,7 @@
 
 .form {
   display: grid;
-  gap: 1px;
+  gap: 1rem;
   background: rgb(255 149 84 / 12%);
 
   label {
@@ -67,10 +67,11 @@
 
   button {
     padding: 1rem 1.5rem;
-    border: 2px solid var(--klyger-dark);
+    border: 1px solid rgb(0 0 0 / 8%);
+    border-radius: 999px;
     background: var(--klyger-orange);
     box-shadow: var(--klyger-shadow-hard);
-    color: var(--klyger-dark);
+    color: var(--klyger-button-text);
     font-family: var(--klyger-heading-font);
     font-size: 0.9rem;
     font-weight: 700;
@@ -79,8 +80,8 @@
     transition: transform 0.2s var(--klyger-ease), box-shadow 0.2s var(--klyger-ease);
 
     &:hover {
-      box-shadow: 2px 2px 0 var(--klyger-dark);
-      transform: translate(2px, 2px);
+      box-shadow: var(--klyger-shadow-soft);
+      transform: translateY(-1px);
     }
   }
 }

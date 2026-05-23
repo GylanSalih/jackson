@@ -1,7 +1,7 @@
-export const imgPath = '/assets/img/sortieren/';
+export const imgPath = "/assets/img/sortieren/";
 
 export const images = {
-  logoWhite: `${imgPath}logo-white-on-black.png`,
+  logoOrange: `${imgPath}logo-orange.png`,
   markOrange: `${imgPath}mark-orange.png`,
   heroMoodboard: `${imgPath}moodboard-golden.png`,
 };

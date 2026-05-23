@@ -4,7 +4,7 @@
   align-items: flex-end;
   padding: 9rem 4rem 5rem;
   background:
-    linear-gradient(135deg, rgb(13 13 13 / 94%), rgb(13 13 13 / 72%)),
+    linear-gradient(135deg, var(--klyger-hero-overlay), var(--klyger-hero-overlay-soft)),
     url('/assets/img/sortieren/brand-shape-top-left.png') center / cover;
 }
 

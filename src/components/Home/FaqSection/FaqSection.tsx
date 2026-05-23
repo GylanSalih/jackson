@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import homeStyles from '../../../Pages/Home/Home.module.scss';
-import styles from './FaqSection.module.scss';
+import React, { useState } from "react";
+import homeStyles from "../../../Pages/Home/Home.module.scss";
+import styles from "./FaqSection.module.scss";
 
 const faqs = [
   [
-    'Für welche Creator ist Home geeignet?',
-    'Home arbeitet mit Creatorn, die eine aktive Community haben und daraus eine eigene Marke aufbauen möchten. Keine Mindest-Followerzahl - wichtig sind Expertise und Ambition.',
+    "Für welche Creator ist Home geeignet?",
+    "Home arbeitet mit Creatorn, die eine aktive Community haben und daraus eine eigene Marke aufbauen möchten. Keine Mindest-Followerzahl - wichtig sind Expertise und Ambition.",
   ],
   [
-    'Unterschied Done with You vs. Einzelleistungen?',
-    'Done with You ist unser Vollprogramm von Strategie bis Launch. Einzelleistungen sind für Creator, die gezielt nur bestimmte Module buchen möchten.',
+    "Unterschied Done with You vs. Einzelleistungen?",
+    "Done with You ist unser Vollprogramm von Strategie bis Launch. Einzelleistungen sind für Creator, die gezielt nur bestimmte Module buchen möchten.",
   ],
   [
-    'Wie lange dauert ein Projekt?',
-    'Ein vollständiger Creator Markenaufbau dauert mehrere Monate. Im Strategiegespräch klären wir gemeinsam, was für dich realistisch und sinnvoll ist.',
+    "Wie lange dauert ein Projekt?",
+    "Ein vollständiger Creator Markenaufbau dauert mehrere Monate. Im Strategiegespräch klären wir gemeinsam, was für dich realistisch und sinnvoll ist.",
   ],
   [
-    'Was kostet das Strategiegespräch?',
-    'Kostenlos und unverbindlich. Wir schauen gemeinsam, ob und wie wir dir helfen können - kein Druck, kein Sales-Pitch.',
+    "Was kostet das Strategiegespräch?",
+    "Kostenlos und unverbindlich. Wir schauen gemeinsam, ob und wie wir dir helfen können - kein Druck, kein Sales-Pitch.",
   ],
 ];
 
@@ -39,8 +39,15 @@ const FaqSection = (): React.ReactElement => {
             const isOpen = openIndex === index;
 
             return (
-              <article className={`${styles.item} ${isOpen ? styles.open : ''}`} key={question}>
-                <button className={styles.button} type="button" onClick={() => setOpenIndex(isOpen ? null : index)}>
+              <article
+                className={`${styles.item} ${isOpen ? styles.open : ""}`}
+                key={question}
+              >
+                <button
+                  className={styles.button}
+                  type="button"
+                  onClick={() => setOpenIndex(isOpen ? null : index)}
+                >
                   <span>{question}</span>
                   <span className={styles.icon}>+</span>
                 </button>

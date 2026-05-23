@@ -1,30 +1,59 @@
-import React, { useState } from 'react';
-import homeStyles from '../../../Pages/Home/Home.module.scss';
-import styles from './BuildingBlocksSection.module.scss';
+import React, { useState } from "react";
+import homeStyles from "../../../Pages/Home/Home.module.scss";
+import styles from "./BuildingBlocksSection.module.scss";
 
 const blocks = [
   {
-    title: 'Strategische Analyse',
+    title: "Strategische Analyse",
     description:
-      'Um Chancen, Risiken und klare Positionierungsmöglichkeiten zu identifizieren, analysieren wir deine vorhandene Marke, deine Reichweite, deine Zielgruppe und deinen Markt.',
-    items: ['Marktanalyse & Branchentrends', 'Wettbewerbsanalyse', 'Zielgruppe & Community', 'Markpositionierung', 'Bestehende Marke & Inhalte', 'Chancen im Markt'],
+      "Um Chancen, Risiken und klare Positionierungsmöglichkeiten zu identifizieren, analysieren wir deine vorhandene Marke, deine Reichweite, deine Zielgruppe und deinen Markt.",
+    items: [
+      "Marktanalyse & Branchentrends",
+      "Wettbewerbsanalyse",
+      "Zielgruppe & Community",
+      "Markpositionierung",
+      "Bestehende Marke & Inhalte",
+      "Chancen im Markt",
+    ],
   },
   {
-    title: 'Unternehmen',
+    title: "Unternehmen",
     description:
-      'Wir entwickeln die strategische Grundlage für dein Unternehmen und definieren, wie sich deine Reichweite langfristig monetarisieren lässt.',
-    items: ['Zielgruppe & Kundenbedürfnisse', 'Wettbewerber & Marktposition', 'Wertversprechen', 'Produkt & Angebotsstruktur', 'Geschäftsmodell', 'Rechtsform'],
+      "Wir entwickeln die strategische Grundlage für dein Unternehmen und definieren, wie sich deine Reichweite langfristig monetarisieren lässt.",
+    items: [
+      "Zielgruppe & Kundenbedürfnisse",
+      "Wettbewerber & Marktposition",
+      "Wertversprechen",
+      "Produkt & Angebotsstruktur",
+      "Geschäftsmodell",
+      "Rechtsform",
+    ],
   },
   {
-    title: 'Marke',
+    title: "Marke",
     description:
-      'Wir entwickeln einen starken Charakter für die Marke, der sich durch klares Verhalten, konsistente Kommunikation und eine visuelle Identität auszeichnet.',
-    items: ['Markenstrategie', 'Name & Markenstory', 'Markenrecht & Patente', 'Markenidentität', 'Design System', 'Brand Guidelines'],
+      "Wir entwickeln einen starken Charakter für die Marke, der sich durch klares Verhalten, konsistente Kommunikation und eine visuelle Identität auszeichnet.",
+    items: [
+      "Markenstrategie",
+      "Name & Markenstory",
+      "Markenrecht & Patente",
+      "Markenidentität",
+      "Design System",
+      "Brand Guidelines",
+    ],
   },
   {
-    title: 'Markteinführung & Vermarktung',
-    description: 'Wir bringen deine Marke oder dein Produkt auf den Markt und schaffen erste Markenerlebnisse für deine Zielgruppe.',
-    items: ['Launchstrategie', 'Community Aktivierung', 'Marketing & Kommunikation', 'Erste Markenerlebnisse', 'Kampagnen & Inhalte', 'Markenaktivierung'],
+    title: "Markteinführung & Vermarktung",
+    description:
+      "Wir bringen deine Marke oder dein Produkt auf den Markt und schaffen erste Markenerlebnisse für deine Zielgruppe.",
+    items: [
+      "Launchstrategie",
+      "Community Aktivierung",
+      "Marketing & Kommunikation",
+      "Erste Markenerlebnisse",
+      "Kampagnen & Inhalte",
+      "Markenaktivierung",
+    ],
   },
 ];
 
@@ -41,7 +70,8 @@ const BuildingBlocksSection = (): React.ReactElement => {
           Die Bausteine einer starken <em>Creator Marke</em>
         </h2>
         <p className={homeStyles.sectionIntro} data-reveal>
-          Aus Reichweite entsteht Schritt für Schritt eine Marke, ein Produkt und ein echtes Unternehmen.
+          Aus Reichweite entsteht Schritt für Schritt eine Marke, ein Produkt
+          und ein echtes Unternehmen.
         </p>
 
         <div className={styles.grid} data-reveal>
@@ -49,8 +79,15 @@ const BuildingBlocksSection = (): React.ReactElement => {
             const isOpen = index === openIndex;
 
             return (
-              <article className={`${styles.item} ${isOpen ? styles.open : ''}`} key={block.title}>
-                <button className={styles.trigger} type="button" onClick={() => setOpenIndex(isOpen ? -1 : index)}>
+              <article
+                className={`${styles.item} ${isOpen ? styles.open : ""}`}
+                key={block.title}
+              >
+                <button
+                  className={styles.trigger}
+                  type="button"
+                  onClick={() => setOpenIndex(isOpen ? -1 : index)}
+                >
                   <span className={styles.title}>{block.title}</span>
                   <span className={styles.icon}>+</span>
                 </button>

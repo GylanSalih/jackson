@@ -3,18 +3,19 @@
   inset: 0 0 auto;
   z-index: 200;
   display: flex;
-  height: 64px;
+  min-height: 72px;
   align-items: center;
   justify-content: space-between;
-  padding: 0 4rem;
+  padding: 0.8rem 4rem;
   border-bottom: 1px solid transparent;
-  transition: background 0.4s, border-color 0.4s;
+  background: color-mix(in srgb, var(--klyger-dark-2) 78%, transparent);
+  backdrop-filter: blur(18px);
+  transition: background 0.25s, border-color 0.25s;
 }
 
 .scrolled {
-  border-color: rgb(255 149 84 / 10%);
-  background: rgb(13 13 13 / 92%);
-  backdrop-filter: blur(20px);
+  border-color: var(--klyger-border);
+  background: color-mix(in srgb, var(--klyger-dark-2) 92%, transparent);
 }
 
 .logo {
@@ -25,127 +26,117 @@
     display: block;
     width: auto;
     height: 28px;
-    transition: transform 0.5s var(--klyger-ease);
+    transition: transform 0.25s var(--klyger-ease);
   }
 
   &:hover img {
-    transform: rotate(-3deg) scale(1.04);
+    transform: scale(1.035);
   }
 }
 
 .navList {
   display: flex;
-  gap: 2rem;
-  padding: 0;
+  gap: 0.5rem;
+  padding: 0.35rem;
+  border: 1px solid var(--klyger-border);
+  border-radius: 999px;
   margin: 0;
+  background: var(--klyger-dark-3);
   list-style: none;
 
   a {
-    position: relative;
-    padding-bottom: 2px;
-    color: var(--klyger-gray-mid);
+    display: inline-flex;
+    min-height: 36px;
+    align-items: center;
+    padding: 0 1rem;
+    border-radius: 999px;
+    color: var(--klyger-gray-light);
     font-family: var(--klyger-heading-font);
-    font-size: 0.72rem;
-    letter-spacing: 0.14em;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
     text-decoration: none;
     text-transform: uppercase;
-    transition: color 0.25s;
-
-    &::after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: var(--klyger-orange);
-      content: '';
-      transition: width 0.3s var(--klyger-ease);
-    }
+    transition: background 0.2s, color 0.2s;
 
     &:hover {
+      background: var(--klyger-dark-4);
       color: var(--klyger-white);
       opacity: 1;
-    }
-
-    &:hover::after {
-      width: 100%;
     }
   }
 }
 
 .activeLink {
+  background: var(--klyger-dark-4);
   color: var(--klyger-white) !important;
+}
 
-  &::after {
-    width: 100% !important;
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.themeToggle {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--klyger-border);
+  border-radius: 999px;
+  background: var(--klyger-dark-3);
+  color: var(--klyger-white);
+  transition: background 0.2s, transform 0.2s var(--klyger-ease);
+
+  &:hover {
+    background: var(--klyger-dark-4);
+    transform: translateY(-1px);
   }
 }
 
 .navCta {
-  position: relative;
-  overflow: hidden;
-  padding: 0.55rem 1.4rem;
-  border: 2px solid var(--klyger-orange);
-  background: transparent;
-  color: var(--klyger-orange);
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  padding: 0 1.2rem;
+  border: 1px solid rgb(0 0 0 / 8%);
+  border-radius: 999px;
+  background: var(--klyger-orange);
+  color: var(--klyger-button-text);
   font-family: var(--klyger-heading-font);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 0.3s;
-
-  &::before {
-    position: absolute;
-    inset: 0;
-    background: var(--klyger-orange);
-    content: '';
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s var(--klyger-ease);
-  }
-
-  span {
-    position: relative;
-    z-index: 1;
-  }
+  transition: background 0.2s, transform 0.2s var(--klyger-ease);
 
   &:hover {
-    color: var(--klyger-dark);
+    background: var(--klyger-orange-dark);
     opacity: 1;
-  }
-
-  &:hover::before {
-    transform: scaleX(1);
+    transform: translateY(-1px);
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 900px) {
   .header {
-    height: auto;
     flex-wrap: wrap;
     gap: 0.8rem 1rem;
-    padding: 0 1.25rem;
+    padding: 0.8rem 1.25rem;
   }
 
   .navList {
     order: 3;
     width: 100%;
     justify-content: center;
-    gap: 1.2rem;
-    padding-bottom: 0.75rem;
+    overflow-x: auto;
   }
 }
 
-@media (max-width: 480px) {
-  .navList {
-    justify-content: flex-start;
-    overflow-x: auto;
-  }
-
+@media (max-width: 520px) {
   .navCta {
-    padding: 0.5rem 0.8rem;
-    font-size: 0.68rem;
+    display: none;
   }
 }

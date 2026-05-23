@@ -1,4 +1,4 @@
-import { RefObject, useEffect } from 'react';
+import { RefObject, useEffect } from "react";
 
 const useReveal = (rootRef: RefObject<HTMLElement>): void => {
   useEffect(() => {
@@ -12,7 +12,7 @@ const useReveal = (rootRef: RefObject<HTMLElement>): void => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
+            entry.target.classList.add("is-visible");
             observer.unobserve(entry.target);
           }
         });
@@ -20,7 +20,9 @@ const useReveal = (rootRef: RefObject<HTMLElement>): void => {
       { threshold: 0.1 },
     );
 
-    root.querySelectorAll('[data-reveal]').forEach((element) => observer.observe(element));
+    root
+      .querySelectorAll("[data-reveal]")
+      .forEach((element) => observer.observe(element));
 
     return () => observer.disconnect();
   }, [rootRef]);

@@ -1,32 +1,32 @@
-import React from 'react';
-import homeStyles from '../../../Pages/Home/Home.module.scss';
-import styles from './ProblemSection.module.scss';
+import React from "react";
+import homeStyles from "../../../Pages/Home/Home.module.scss";
+import styles from "./ProblemSection.module.scss";
 
 const cards = [
   {
-    tone: 'left',
-    word: 'ABHÄNGIG',
-    tag: 'Status Quo - Creator Einkommen',
-    title: 'Abhängig von Kooperationen',
+    tone: "left",
+    word: "ABHÄNGIG",
+    tag: "Status Quo - Creator Einkommen",
+    title: "Abhängig von Kooperationen",
     points: [
-      'Brand Deals & Kooperationen',
-      'Affiliate Einnahmen',
-      'Plattformabhängig - kein eigener Kanal',
-      'Schwankendes, unsicheres Einkommen',
-      'Kein aufbaubarer Unternehmenswert',
+      "Brand Deals & Kooperationen",
+      "Affiliate Einnahmen",
+      "Plattformabhängig - kein eigener Kanal",
+      "Schwankendes, unsicheres Einkommen",
+      "Kein aufbaubarer Unternehmenswert",
     ],
   },
   {
-    tone: 'right',
-    word: 'UNLEASHED',
-    tag: 'Das Ziel - Creator Unternehmer:in',
-    title: 'Eigene Marke, eigene Kontrolle',
+    tone: "right",
+    word: "UNLEASHED",
+    tag: "Das Ziel - Creator Unternehmer:in",
+    title: "Eigene Marke, eigene Kontrolle",
     points: [
-      'Eigene Marke & eigene Produkte',
-      'Eigene Kunden - unabhängig von Plattformen',
-      'Skalierbares Geschäftsmodell',
-      'Stabiles, plattformunabhängiges Einkommen',
-      'Langfristiger Unternehmenswert',
+      "Eigene Marke & eigene Produkte",
+      "Eigene Kunden - unabhängig von Plattformen",
+      "Skalierbares Geschäftsmodell",
+      "Stabiles, plattformunabhängiges Einkommen",
+      "Langfristiger Unternehmenswert",
     ],
   },
 ];
@@ -42,12 +42,18 @@ const ProblemSection = (): React.ReactElement => {
           Follower oder <em>Kunden?</em>
         </h2>
         <p className={homeStyles.sectionIntro} data-reveal>
-          Viele Creator verdienen ihr Geld mit Kooperationen. Ambitionierte Creator entwickeln daraus eine eigene Marke und ein echtes Unternehmen.
+          Viele Creator verdienen ihr Geld mit Kooperationen. Ambitionierte
+          Creator entwickeln daraus eine eigene Marke und ein echtes
+          Unternehmen.
         </p>
 
         <div className={styles.grid} data-reveal>
           {cards.map((card) => (
-            <article className={`${styles.card} ${styles[card.tone]}`} key={card.title} data-cursor="interactive">
+            <article
+              className={`${styles.card} ${styles[card.tone]}`}
+              key={card.title}
+              data-cursor="interactive"
+            >
               <span className={styles.backgroundWord}>{card.word}</span>
               <div className={styles.tag}>{card.tag}</div>
               <h3 className={styles.cardTitle}>{card.title}</h3>

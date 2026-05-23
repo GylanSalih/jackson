@@ -4,21 +4,14 @@
   background: var(--klyger-dark-2);
 
   &::before {
-    position: absolute;
-    top: -30%;
-    right: -10%;
-    width: 50%;
-    height: 150%;
-    background: radial-gradient(ellipse, rgb(255 149 84 / 4%) 0%, transparent 70%);
-    content: '';
-    pointer-events: none;
+    display: none;
   }
 }
 
 .grid {
   position: relative;
   display: grid;
-  gap: 1px;
+  gap: 1rem;
   grid-template-columns: 1fr 1fr;
   margin-top: 3rem;
 }

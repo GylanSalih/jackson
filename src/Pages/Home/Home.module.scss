@@ -1,43 +1,11 @@
 .home {
-  --klyger-orange: #ff9554;
-  --klyger-orange-dark: #e4674c;
-  --klyger-pink: #ff96be;
-  --klyger-brown: #b05d3a;
-  --klyger-dark: #0d0d0d;
-  --klyger-dark-2: #131313;
-  --klyger-dark-3: #1a1a1a;
-  --klyger-dark-4: #222;
-  --klyger-gray-light: #bebebe;
-  --klyger-gray-mid: #737373;
-  --klyger-white: #fff;
-  --klyger-heading-font: 'Barlow Condensed', 'Arial Narrow', sans-serif;
-  --klyger-body-font: 'Poppins', 'Segoe UI', sans-serif;
-  --klyger-ease: cubic-bezier(0.16, 1, 0.3, 1);
-  --klyger-shadow-hard: 4px 4px 0 var(--klyger-dark);
-
   min-height: 100vh;
   overflow-x: hidden;
   background: var(--klyger-dark);
   color: var(--klyger-white);
-  cursor: none;
   font-family: var(--klyger-body-font);
   font-weight: 300;
   line-height: 1.7;
-
-  :global([data-reveal]) {
-    opacity: 0;
-    transform: translateY(18px);
-    transition: opacity 0.7s var(--klyger-ease), transform 0.7s var(--klyger-ease);
-  }
-
-  :global([data-reveal].is-visible) {
-    opacity: 1;
-    transform: none;
-  }
-
-  @media (hover: none), (pointer: coarse) {
-    cursor: auto;
-  }
 }
 
 .home section {
@@ -137,31 +105,32 @@
 
 .primaryButton {
   position: relative;
-  border: 2px solid var(--klyger-dark);
+  border: 1px solid rgb(0 0 0 / 8%);
+  border-radius: 999px;
   background: var(--klyger-orange);
   box-shadow: var(--klyger-shadow-hard);
-  color: var(--klyger-dark);
+  color: var(--klyger-button-text);
   transition: background 0.2s, transform 0.2s var(--klyger-ease), box-shadow 0.2s var(--klyger-ease);
 
   &:hover {
     background: var(--klyger-orange-dark);
-    box-shadow: 2px 2px 0 var(--klyger-dark);
-    transform: translate(2px, 2px);
+    box-shadow: var(--klyger-shadow-soft);
+    transform: translateY(-1px);
   }
 
   &:active {
-    box-shadow: 0 0 0 var(--klyger-dark);
-    transform: translate(4px, 4px);
+    transform: translateY(0);
   }
 }
 
 .ghostButton {
-  border: 2px solid rgb(255 255 255 / 18%);
-  background: transparent;
+  border: 1px solid var(--klyger-border);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 48%);
   color: var(--klyger-gray-light);
 
   &:hover {
-    border-color: rgb(255 149 84 / 40%);
+    border-color: rgb(228 111 63 / 38%);
     color: var(--klyger-orange);
   }
 }

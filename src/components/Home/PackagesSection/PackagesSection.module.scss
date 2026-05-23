@@ -4,7 +4,7 @@
 
 .grid {
   display: grid;
-  gap: 1px;
+  gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 3rem;
 }
@@ -54,7 +54,7 @@
   .packageButton {
     border-color: var(--klyger-orange);
     background: var(--klyger-orange);
-    color: var(--klyger-dark);
+    color: var(--klyger-button-text);
 
     &::before {
       display: none;
@@ -70,7 +70,7 @@
   width: fit-content;
   padding: 0.2rem 0.8rem;
   background: var(--klyger-orange);
-  color: var(--klyger-dark);
+  color: var(--klyger-button-text);
   font-family: var(--klyger-heading-font);
   font-size: 0.58rem;
   font-weight: 700;

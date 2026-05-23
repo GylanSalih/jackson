@@ -4,11 +4,7 @@
   background: var(--klyger-dark);
 
   &::before {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse 60% 80% at 80% 50%, rgb(255 149 84 / 4%) 0%, transparent 70%);
-    content: '';
-    pointer-events: none;
+    display: none;
   }
 }
 
@@ -27,7 +23,7 @@
 
 .grid {
   display: grid;
-  gap: 1px;
+  gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
 }
 

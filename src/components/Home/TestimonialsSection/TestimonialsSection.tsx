@@ -1,19 +1,19 @@
-import React from 'react';
-import homeStyles from '../../../Pages/Home/Home.module.scss';
-import styles from './TestimonialsSection.module.scss';
+import React from "react";
+import homeStyles from "../../../Pages/Home/Home.module.scss";
+import styles from "./TestimonialsSection.module.scss";
 
 const testimonials = [
   {
     quote:
-      'Ich hatte Reichweite, aber kein echtes Unternehmen dahinter. Home hat mir geholfen - mit einer klaren Marke, einem eigenen Produkt und echten Kunden.',
-    name: 'MH',
-    role: 'Creator & Gründer',
+      "Ich hatte Reichweite, aber kein echtes Unternehmen dahinter. Home hat mir geholfen - mit einer klaren Marke, einem eigenen Produkt und echten Kunden.",
+    name: "MH",
+    role: "Creator & Gründer",
   },
   {
     quote:
-      'Strukturiert, aber nie starr. Wir haben meine Marke von Grund auf entwickelt - Strategie, Name, Identität, Launch. Endlich fühlt sich alles stimmig an.',
-    name: 'Eti',
-    role: 'Content Creator',
+      "Strukturiert, aber nie starr. Wir haben meine Marke von Grund auf entwickelt - Strategie, Name, Identität, Launch. Endlich fühlt sich alles stimmig an.",
+    name: "Eti",
+    role: "Content Creator",
   },
 ];
 
@@ -30,7 +30,11 @@ const TestimonialsSection = (): React.ReactElement => {
 
         <div className={styles.grid} data-reveal>
           {testimonials.map((testimonial) => (
-            <article className={styles.item} key={testimonial.name} data-cursor="interactive">
+            <article
+              className={styles.item}
+              key={testimonial.name}
+              data-cursor="interactive"
+            >
               <div className={styles.quoteBackground}>"</div>
               <blockquote>{testimonial.quote}</blockquote>
               <div className={styles.author}>

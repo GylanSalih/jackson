@@ -1,52 +1,51 @@
 // Global type declarations for module imports
 
-declare module '*.scss' {
+declare module "*.scss" {
   const classes: { readonly [key: string]: string };
   export default classes;
 }
 
-declare module '*.module.scss' {
+declare module "*.module.scss" {
   const classes: { readonly [key: string]: string };
   export default classes;
 }
 
-declare module '*.css' {
+declare module "*.css" {
   const classes: { readonly [key: string]: string };
   export default classes;
 }
 
-declare module '*.module.css' {
+declare module "*.module.css" {
   const classes: { readonly [key: string]: string };
   export default classes;
 }
 
-declare module '*.svg' {
+declare module "*.svg" {
   const content: string;
   export default content;
 }
 
-declare module '*.png' {
+declare module "*.png" {
   const content: string;
   export default content;
 }
 
-declare module '*.jpg' {
+declare module "*.jpg" {
   const content: string;
   export default content;
 }
 
-declare module '*.jpeg' {
+declare module "*.jpeg" {
   const content: string;
   export default content;
 }
 
-declare module '*.gif' {
+declare module "*.gif" {
   const content: string;
   export default content;
 }
 
-declare module '*.webp' {
+declare module "*.webp" {
   const content: string;
   export default content;
 }
-

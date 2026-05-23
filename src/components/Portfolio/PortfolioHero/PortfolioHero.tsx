@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './PortfolioHero.module.scss';
+import React from "react";
+import styles from "./PortfolioHero.module.scss";
 
 const PortfolioHero = (): React.ReactElement => {
   return (
@@ -10,7 +10,8 @@ const PortfolioHero = (): React.ReactElement => {
           Arbeiten, die aus Creator Brands <em>echte Systeme</em> machen.
         </h1>
         <p data-reveal>
-          Eine kuratierte Übersicht typischer Projekte: Positionierung, Produktkonzept, Identity, Launch und Aktivierung.
+          Eine kuratierte Übersicht typischer Projekte: Positionierung,
+          Produktkonzept, Identity, Launch und Aktivierung.
         </p>
       </div>
     </section>
