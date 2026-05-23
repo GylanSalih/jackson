@@ -1,0 +1,96 @@
+.brief {
+  padding: 6rem 4rem;
+  background: var(--klyger-dark);
+}
+
+.inner {
+  display: grid;
+  max-width: 1200px;
+  gap: 4rem;
+  grid-template-columns: 0.8fr 1.2fr;
+  margin: 0 auto;
+}
+
+.copy {
+  span {
+    color: var(--klyger-orange);
+    font-family: var(--klyger-heading-font);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 1rem 0 0;
+    color: var(--klyger-white);
+    font-family: var(--klyger-heading-font);
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    line-height: 0.95;
+    text-transform: uppercase;
+  }
+}
+
+.form {
+  display: grid;
+  gap: 1px;
+  background: rgb(255 149 84 / 12%);
+
+  label {
+    display: grid;
+    gap: 0.7rem;
+    padding: 1.5rem;
+    background: var(--klyger-dark-3);
+    color: var(--klyger-orange);
+    font-family: var(--klyger-heading-font);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    color: var(--klyger-white);
+    font-family: var(--klyger-body-font);
+    font-size: 0.95rem;
+    letter-spacing: 0;
+    outline: 0;
+    resize: vertical;
+    text-transform: none;
+
+    &::placeholder {
+      color: var(--klyger-gray-mid);
+    }
+  }
+
+  button {
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--klyger-dark);
+    background: var(--klyger-orange);
+    box-shadow: var(--klyger-shadow-hard);
+    color: var(--klyger-dark);
+    font-family: var(--klyger-heading-font);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: transform 0.2s var(--klyger-ease), box-shadow 0.2s var(--klyger-ease);
+
+    &:hover {
+      box-shadow: 2px 2px 0 var(--klyger-dark);
+      transform: translate(2px, 2px);
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .brief {
+    padding: 5rem 1.25rem;
+  }
+
+  .inner {
+    grid-template-columns: 1fr;
+  }
+}
