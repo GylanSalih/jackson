@@ -1,0 +1,41 @@
+.dot,
+.ring {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.dot {
+  z-index: 9999;
+  width: 8px;
+  height: 8px;
+  background: var(--klyger-orange);
+  transition: width 0.2s, height 0.2s;
+}
+
+.ring {
+  z-index: 9998;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgb(255 149 84 / 35%);
+  transition: width 0.2s, height 0.2s, border-color 0.2s;
+}
+
+.active.dot {
+  width: 16px;
+  height: 16px;
+}
+
+.active.ring {
+  width: 50px;
+  height: 50px;
+  border-color: rgb(255 149 84 / 60%);
+}
+
+@media (hover: none), (pointer: coarse) {
+  .dot,
+  .ring {
+    display: none;
+  }
+}

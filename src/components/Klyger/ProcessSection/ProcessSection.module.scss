@@ -1,0 +1,255 @@
+.process {
+  background: var(--klyger-dark);
+}
+
+.steps {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.stepCard {
+  position: relative;
+  overflow: hidden;
+  padding: 2.5rem;
+  background: var(--klyger-dark-3);
+  transition: background 0.35s;
+
+  &:hover {
+    background: var(--klyger-dark-4);
+  }
+
+  &:hover .stepTop {
+    transform: scaleX(1);
+  }
+}
+
+.stepTop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: var(--klyger-orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--klyger-ease);
+}
+
+.stepNumber {
+  margin-bottom: 0.7rem;
+  color: var(--klyger-orange);
+  font-family: var(--klyger-heading-font);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.stepName {
+  margin: 0 0 1rem;
+  color: var(--klyger-white);
+  font-family: var(--klyger-heading-font);
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.stepText {
+  margin: 0;
+  color: var(--klyger-gray-light);
+  font-size: 0.82rem;
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+.stepBackground {
+  position: absolute;
+  right: 0.8rem;
+  bottom: -1.5rem;
+  color: var(--klyger-orange);
+  font-family: var(--klyger-heading-font);
+  font-size: 7rem;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.moduleLabel {
+  margin-top: 1rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 1px;
+  margin-bottom: 1px;
+}
+
+.tab {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  padding: 1rem 1.5rem;
+  border: 0;
+  background: var(--klyger-dark-3);
+  color: var(--klyger-gray-mid);
+  font-family: var(--klyger-heading-font);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-align: left;
+  text-transform: uppercase;
+  transition: all 0.3s;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: var(--klyger-orange);
+    content: '';
+    transform: scaleX(0);
+    transition: transform 0.35s var(--klyger-ease);
+  }
+
+  &:hover {
+    background: var(--klyger-dark-4);
+    color: var(--klyger-gray-light);
+  }
+}
+
+.activeTab {
+  background: var(--klyger-dark-4);
+  color: var(--klyger-white);
+
+  &::after {
+    transform: scaleX(1);
+  }
+}
+
+.body {
+  min-height: 280px;
+  background: var(--klyger-dark-3);
+}
+
+.panel {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr 2fr;
+  padding: 2.5rem;
+  animation: fadePanel 0.4s var(--klyger-ease);
+}
+
+.meta {
+  h3 {
+    margin: 0 0 0.5rem;
+    color: var(--klyger-white);
+    font-family: var(--klyger-heading-font);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0 0 1.5rem;
+    color: var(--klyger-gray-light);
+    font-size: 0.82rem;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid rgb(255 149 84 / 25%);
+  background: rgb(255 149 84 / 12%);
+  color: var(--klyger-orange);
+  font-family: var(--klyger-heading-font);
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.items {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.item {
+  padding: 1.5rem;
+  background: var(--klyger-dark-4);
+  transition: background 0.3s;
+
+  &:hover {
+    background: #282828;
+  }
+
+  h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 0.5rem;
+    color: var(--klyger-white);
+    font-family: var(--klyger-heading-font);
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &::before {
+      width: 6px;
+      min-width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--klyger-orange);
+      content: '';
+    }
+  }
+
+  p {
+    margin: 0;
+    color: var(--klyger-gray-mid);
+    font-size: 0.78rem;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+}
+
+@keyframes fadePanel {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .steps,
+  .panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .tabs,
+  .items {
+    grid-template-columns: 1fr;
+  }
+
+  .tabs {
+    display: grid;
+  }
+
+  .panel,
+  .stepCard {
+    padding: 2rem;
+  }
+}

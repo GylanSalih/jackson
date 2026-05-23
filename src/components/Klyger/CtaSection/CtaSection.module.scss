@@ -1,0 +1,76 @@
+.cta {
+  position: relative;
+  overflow: hidden;
+  padding: 8rem 4rem;
+  background: var(--klyger-dark);
+  text-align: center;
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+  margin: 0 auto;
+
+  p {
+    margin: 0 0 2.5rem;
+    color: var(--klyger-gray-light);
+    font-size: 0.88rem;
+    font-weight: 300;
+    line-height: 1.85;
+  }
+}
+
+.symbol {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1.4rem;
+  animation: rotateSymbol 18s linear infinite;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.heading {
+  margin-bottom: 1.2rem;
+  color: var(--klyger-white);
+  font-family: var(--klyger-heading-font);
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 700;
+  line-height: 0.95;
+  text-transform: uppercase;
+
+  em {
+    display: block;
+    color: var(--klyger-orange);
+    font-style: italic;
+    font-weight: 300;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+}
+
+@keyframes rotateSymbol {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .cta {
+    padding: 6rem 1.25rem;
+  }
+}

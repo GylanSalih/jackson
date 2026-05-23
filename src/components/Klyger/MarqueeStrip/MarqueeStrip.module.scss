@@ -1,0 +1,40 @@
+.marquee {
+  display: flex;
+  height: 44px;
+  align-items: center;
+  overflow: hidden;
+  background: var(--klyger-orange);
+}
+
+.track {
+  display: flex;
+  animation: marquee 22s linear infinite;
+  white-space: nowrap;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2rem;
+  color: var(--klyger-dark);
+  font-family: var(--klyger-heading-font);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.separator {
+  opacity: 0.28;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}

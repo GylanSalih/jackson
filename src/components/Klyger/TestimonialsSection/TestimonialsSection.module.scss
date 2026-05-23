@@ -1,0 +1,68 @@
+.testimonials {
+  background: var(--klyger-dark);
+}
+
+.grid {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 3rem;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+  padding: 2.5rem;
+  background: var(--klyger-dark-3);
+  transition: background 0.35s;
+
+  &:hover {
+    background: var(--klyger-dark-4);
+  }
+
+  blockquote {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 1.4rem;
+    color: var(--klyger-white);
+    font-family: var(--klyger-heading-font);
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.55;
+  }
+}
+
+.quoteBackground {
+  position: absolute;
+  top: 0.8rem;
+  right: 1.5rem;
+  color: var(--klyger-orange);
+  font-family: var(--klyger-heading-font);
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.08;
+}
+
+.author {
+  color: var(--klyger-gray-mid);
+  font-family: var(--klyger-heading-font);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  strong {
+    display: block;
+    margin-bottom: 0.1rem;
+    color: var(--klyger-orange);
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
